@@ -28,8 +28,22 @@ fun main() {
     } else {
         println("Autenticação falhou")
     }
+
+    val gui = Diretor(
+        nome = "Gui",
+        cpf = "333.333.333-33",
+        salario = 4000.00,
+        senha = 1234,
+        plr = 200.00
+    )
+
+    println("Nome: ${gui.nome}")
+    println("Cpf: ${gui.cpf}")
+    println("Salário: ${gui.salario}")
+    println("Bonificação: ${gui.bonificacao()}")
+    println("Plr: ${gui.plr}")
 }
-}
+
 
 
 
