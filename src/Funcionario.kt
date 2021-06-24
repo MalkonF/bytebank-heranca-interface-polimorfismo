@@ -3,11 +3,9 @@ open class Funcionario(
     val cpf: String,
     val salario: Double
 ) {
-    //função bonificação convertida para properties
-    open val bonificacao: Double
-        get() {
-            return salario * 0.1
-        }
+
+    open fun bonificacao(): Double = salario * 0.1
+
     //código mais idiomático
     //open val bonificacao: Double get() = salario * 0.1
     //properties com tipo Double implícito
