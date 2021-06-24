@@ -28,8 +28,8 @@ fun main() {
     } else {
         println("Autenticação falhou")
     }
-
-    val gui = Diretor(
+    //aqui fala que gui só poderá usar as coisas de Funcionario, por exemplo, plr não vai poder acessar porque só existe nele e nao em funcionario
+    val gui: Funcionario = Diretor(
         nome = "Gui",
         cpf = "333.333.333-33",
         salario = 4000.00,
@@ -41,13 +41,16 @@ fun main() {
     println("Cpf: ${gui.cpf}")
     println("Salário: ${gui.salario}")
     println("Bonificação: ${gui.bonificacao}")
-    println("Plr: ${gui.plr}")
+    //println("Plr: ${gui.plr}")
+    //: Analista nao é necessário mas serve para deixar explicito que Analista herda de Funcionario
+    val maria: Analista = Analista(nome = "Maria", cpf = "444.444.444-44", salario = 3000.0)
 
 
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(alex)
     calculadora.registra(fran)
     calculadora.registra(gui)
+    calculadora.registra(maria)
 
     println("Total de bonificação: ${calculadora.total}")
 }

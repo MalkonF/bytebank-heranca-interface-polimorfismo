@@ -5,7 +5,10 @@ open class Funcionario(
 ) {
 
     open val bonificacao: Double
-        get() = salario * 0.1
+        get() {
+            println("Bonificação funcionário")
+            return salario * 0.1
+        }
 
     //código mais idiomático
     //open val bonificacao: Double get() = salario * 0.1
