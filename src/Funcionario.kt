@@ -6,4 +6,5 @@ abstract class Funcionario(//abstract open é redundante
 
     abstract val bonificacao: Double
 
+
 }
