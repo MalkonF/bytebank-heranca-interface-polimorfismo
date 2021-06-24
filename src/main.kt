@@ -10,6 +10,25 @@ fun main() {
     println("Cpf: ${alex.cpf}")
     println("Salário: ${alex.salario}")
     println("Bonificação: ${alex.bonificacao()}")
+
+    val fran = Gerente(
+        nome = "Fran",
+        cpf = "222.222.222-22",
+        salario = 2000.00,
+        senha = 1234
+    )
+
+    println("Nome: ${fran.nome}")
+    println("Cpf: ${fran.cpf}")
+    println("Salário: ${fran.salario}")
+    println("Bonificação: ${fran.bonificacao()}")
+
+    if (fran.autentica(1234)) {
+        println("Autententicou com sucesso")
+    } else {
+        println("Autenticação falhou")
+    }
+}
 }
 
 

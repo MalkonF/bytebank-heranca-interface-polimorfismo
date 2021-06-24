@@ -1,27 +1,12 @@
 class Funcionario(
     val nome: String,
     val cpf: String,
-    val salario: Double,
-    val tipo: Int
+    val salario: Double
 ) {
 
     fun bonificacao(): Double {
-        when (tipo) {
-            0 -> {
-                return salario * 0.1 //representa 10% do salário
-            }
-            1 -> {
-                return salario * 0.2
-            }
-            else -> {
-                return salario * 0.3
-            }
-        }
+        return salario * 0.1
     }
 
-    fun autentica(senha: Int) {
-        if (tipo == 1) {
-            // pode autenticar
-        }
-    }
+
 }
